@@ -1,0 +1,41 @@
+ALGORITHM NB_Char
+VAR
+    strg:STRING;
+    nb:INTEGER;
+BEGIN
+    for (int i:=0,i<strg.length(),i++) do
+        if(str.charAt[i]) then
+            nb++;
+        end_if
+    end_for
+    write(nb)
+END
+
+ALGORITHM NB_word
+VAR
+    strg:STRING;
+    nb:INTEGER;
+BEGIN
+    for (int i:=0,i<strg.length(),i++) do
+        if(str[i]==" ") then
+            nb++;
+        end_if
+    end_for
+    nb++;
+    write(nb)
+END
+
+ALGORITHM NB_vowel
+VAR
+    strg:STRING;
+    nb:INTEGER;
+    vow:array_of char[6]:=["a","o","i","u","e","y"]
+BEGIN
+    for (int i:=0,i<strg.length(),i++) do
+        for(int j:=0,j<vow.length(),j++) do
+            if(str[i] in vow[j] ) then
+            nb++;
+        end_if
+    end_for
+    write(nb)
+END
